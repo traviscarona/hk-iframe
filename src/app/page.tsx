@@ -3,8 +3,8 @@ import ClientComponent from "./ClientComponent"
 export const dynamic = 'force-dynamic'
 
 async function getServerSideProps() {
-  const apiKey = process.env.HOMEKYND_API_KEY
-  const companyId = process.env.HOMEKYND_COMPANY_ID
+  const apiKey = process.env.NEXT_PUBLIC_HOMEKYND_API_KEY
+  const companyId = process.env.NEXT_PUBLIC_HOMEKYND_COMPANY_ID
   
   if (!apiKey || !companyId) {
     throw new Error('Missing required environment variables')
