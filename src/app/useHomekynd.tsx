@@ -14,7 +14,7 @@ const useHomekynd = (companyId: string, apiSecret: string) => {
           body: JSON.stringify({ api_secret: apiSecret, id: companyId })
         });
         const data = await res.json();
-        if (res.ok) 
+        if (res.ok) {
           setToken(data.token);
         } else {
           console.error("Error fetching token:", data);

@@ -2,8 +2,8 @@
 import useHomekynd from "./useHomekynd";
 
 // The company might want to put this in a .env file  //
-const HOMEKYND_API_KEY = process.env.HOMEKYND_API_KEY
-const HOMEKYND_COMPANY_ID = process.env.HOMEKYND_COMPANY_ID
+const HOMEKYND_API_KEY = process.env.HOMEKYND_API_KEY ?? (() => { throw new Error('HOMEKYND_API_KEY is required') })()
+const HOMEKYND_COMPANY_ID = process.env.HOMEKYND_COMPANY_ID ?? (() => { throw new Error('HOMEKYND_COMPANY_ID is required') })()
 ////////////////////////////////////////////////////////
 
 export default function Home() {
